@@ -12,9 +12,9 @@ import (
 
 func PrepareTestContainer(t *testing.T, version string) (cleanup func(), cfg *ldaputil.ConfigEntry) {
 	runner, err := docker.NewServiceRunner(docker.RunOptions{
-		// Currently set to "michelvocks" until https://github.com/rroemhild/docker-test-openldap/pull/14
+		// Currently set to "mlevitt" until https://github.com/rroemhild/docker-test-openldap/pull/14
 		// has been merged.
-		ImageRepo:     "michelvocks/docker-test-openldap",
+		ImageRepo:     "mlevitt/docker-test-openldap",
 		ImageTag:      version,
 		ContainerName: "ldap",
 		Ports:         []string{"389/tcp"},
